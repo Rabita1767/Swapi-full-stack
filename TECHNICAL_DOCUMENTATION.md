@@ -7,10 +7,9 @@
 This fullstack project is a Star Wars character explorer built using:
 
 - **Backend:** Node.js, Express, TypeScript, Redis
-- **Frontend:** React, Vite, TypeScript, SCSS
+- **Frontend:** React, Vite, TypeScript, RTK Query, SCSS
 - **External API:** [https://swapi.tech](https://swapi.tech/)
 
-Users can:
 Users can:
 
 - Browse paginated characters
@@ -26,7 +25,7 @@ Swapi-full-stack/
 │   │   ├── controllers/         → Route logic
 │   │   ├── services/            → Business logic (fetching, caching, formatting)
 │   │   ├── routes/              → Route declarations
-│   │   ├── middlewares/         → Error handling, validation, etc.
+│   │   ├── middlewares/         → Error handling.
 │   │   ├── config/              → Redis setup, constants, axios config
 │   │   ├── utils/               → Helpers like AppError, responseFormatter
 │   │   ├── constants/           → Message strings and HTTP codes
