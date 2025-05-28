@@ -11,7 +11,7 @@ A fullstack Star Wars character explorer built with:
 
 swapi-fullstack/
 ├── swapi-backend/ → Express + TypeScript + Redis 
-├── swapi-frontend/ → React + Vite UI
+├── swapi-frontend/ → React + Vite UI + RTK Query
 
 ## 🔧 Setup Instructions
 
@@ -76,9 +76,10 @@ Then open 👉 [http://localhost:5173](http://localhost:5173) in your browser.
 - ⚡️ Redis caching for faster backend responses
 - ❌ Handles 404 and error states
 - 🌌 Styled using SCSS (with modular components)
-- 📱 Fully responsive design for devices ranging from **340px** to **1280px**.
-- 🖼️ Optimized layout for mobile, tablet, and desktop screens.
-- 🎨 Adaptive SCSS styling for seamless user experience across all resolutions.
+- 📱 Fully responsive design for devices ranging from **340px** to **1280px**
+- 🖼️ Optimized layout for mobile, tablet, and desktop screens
+- 🎨 Adaptive SCSS styling for seamless user experience across all resolutions
+- 🔄 Integrated **RTK Query** for efficient state management and API data fetching
 
 ---
 
@@ -87,7 +88,7 @@ Then open 👉 [http://localhost:5173](http://localhost:5173) in your browser.
 | Layer    | Tech Used                             |
 | -------- | ------------------------------------- |
 | Backend  | Node.js, Express, TypeScript, Redis   |
-| Frontend | React, Vite, TypeScript               |
+| Frontend | React, Vite, TypeScript  , RTK Query             |
 | Styling  | SCSS (modular components)             |
 | API      | [SWAPI.tech](https://swapi.tech/api)  |
 

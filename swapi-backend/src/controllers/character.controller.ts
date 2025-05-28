@@ -21,42 +21,6 @@ class CharacterController {
         }
     }
 
-    // public async getAllCharacters(req: Request, res: Response, next: NextFunction): Promise<void> {
-    //     try {
-    //         const page = parseInt(req.query.page as string) || 1;
-    //         const limit = parseInt(req.query.limit as string) || 10;
-    
-    //         // Fetch the characters
-    //         const data = await CharacterService.fetchCharacters(Number(page), Number(limit));
-    
-    //         // Extract additional information for each character
-    //         const enrichedResults = await Promise.all(
-    //             data.result.results.map(async (character: any) => {
-    //                 try {
-    //                     const additionalInfo = await axios.get(character.url); // Fetch additional info
-    //                     return { ...character, details: additionalInfo.data.result }; // Merge additional info
-    //                 } catch (error) {
-    //                     return { ...character, details: null }; // Return null if additional info fetch fails
-    //                 }
-    //             })
-    //         );
-    
-    //         // Replace the original results with enriched results
-    //         data.result.results = enrichedResults;
-    
-    //         // Send the response
-    //         return sendResponse(
-    //             res,
-    //             HTTP_STATUS.OK,
-    //             Messages.CHARACTER_FETCHED_SUCCESSFULLY,
-    //             data.cached,
-    //             data.result
-    //         );
-    //     } catch (error) {
-    //         next(error);
-    //     }
-    // }
-
     public async getCharacterById(req:Request,res:Response,next:NextFunction):Promise<void>{
         try {
             const {id}=req.params;
