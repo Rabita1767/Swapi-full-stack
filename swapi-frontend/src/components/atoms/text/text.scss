@@ -1,0 +1,45 @@
+@import "../../../styles/index.scss";
+.a-text{
+    color: $color-black;
+    font-size: $base-font-size;
+    font-weight: $font-regular;
+    font-style: normal;
+    line-height: normal;
+    &--18{
+        font-size: 18px;
+    }
+    &--24{
+        font-size: 24px;
+    }
+    &--32{
+        font-size: 32px;
+    }
+    &--700{
+        font-weight: $font-bold;
+    }
+    &--600{
+        font-weight: 600;
+    }
+    &--32lh
+    {
+        list-style: 32px;
+    }
+    &--28lh{
+        line-height: 28px;
+    }
+    &--white{
+        color:$color-white;
+    }
+    &--purple{
+        color:$color-primary-purple
+    }
+    &--gray{
+        color:$color-light-gray;
+    }
+    &--duskyGray{
+        color:$color-dusky-gray;
+    }
+    &--isPointer{
+        cursor: pointer;
+    }
+}

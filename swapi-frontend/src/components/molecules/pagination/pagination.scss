@@ -1,0 +1,35 @@
+@import "../../../styles/index.scss";
+.m-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    .a-button{
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      background-color: $primary-color;
+      color: $color-white;
+    //   transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+  
+      &:disabled {
+        background-color: lighten($primary-color, 20%);
+        cursor: not-allowed;
+      }
+    }
+  
+    &__info {
+      font-size: 1rem;
+      font-weight: 500;
+      color: $color-gray;
+    }
+  }

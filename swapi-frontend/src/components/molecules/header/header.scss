@@ -1,0 +1,20 @@
+@import "../../../styles/index.scss";
+.m-searchBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    margin: 0 auto;
+    padding: 1.5rem;
+    background-color: $color-primary-gray;
+    backdrop-filter: none;
+    .a-text{
+            background: linear-gradient(to right, #a78bfa, #f472b6, #ef4444); // Gradient colors
+            -webkit-background-clip: text; // Clip the background to the text
+            -webkit-text-fill-color: transparent; // Make the text transparent
+            background-clip: text; // Fallback for non-webkit browsers          
+    }
+    @include breakpoint("sm") {
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+  }
