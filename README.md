@@ -3,13 +3,13 @@
 A fullstack Star Wars character explorer built with:
 
 - ⚙️ **Node.js**, **Express**, **TypeScript**, **Redis** (Backend)
-- 🌐 **React**, **Vite**, **TypeScript**, **SCSS** (Frontend)
+- 🌐 **React**, **Vite**, **TypeScript**, **SCSS** **RTK Query**(Frontend)
 
 ---
 
 ## 📁 Project Structure
 
-swapi-fullstack/
+Swapi-full-stack/
 ├── swapi-backend/ → Express + TypeScript + Redis 
 ├── swapi-frontend/ → React + Vite UI + RTK Query
 
