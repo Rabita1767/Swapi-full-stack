@@ -1,4 +1,4 @@
-# 🧠 Technical Documentation – SWAPI Fullstack App
+# 🧠 Technical Documentation – SWAPI Fullstack Application
 
 ---
 
@@ -11,6 +11,8 @@ This fullstack project is a Star Wars character explorer built using:
 - **External API:** [https://swapi.tech](https://swapi.tech/)
 
 Users can:
+Users can:
+
 - Browse paginated characters
 - Search by name
 - View detailed character info
@@ -18,10 +20,8 @@ Users can:
 
 ---
 
-## 📁 Folder Structure
-
-SSwapi-full-stack/
-├── swapi-backend/               → API built with Express + Redis
+Swapi-full-stack/
+├── swapi-backend/               → Backend API built with Express and Redis              → API built with Express + Redis
 │   ├── src/
 │   │   ├── controllers/         → Route logic
 │   │   ├── services/            → Business logic (fetching, caching, formatting)
@@ -32,9 +32,7 @@ SSwapi-full-stack/
 │   │   ├── constants/           → Message strings and HTTP codes
 │   │   ├── types/               → TypeScript interfaces and types
 │   │   └── server.ts            → App entry point
-│   └── .env
-
-├── swapi-frontend/              → React + Vite frontend
+├── swapi-frontend/              → Frontend built with React and Vite
 │   ├── src/
 │   │   ├── components/          → UI components
 │   │   │   ├── atoms/           → Basic elements (Input, Button, etc.)
@@ -65,7 +63,7 @@ Base URL: `http://localhost:8000/api/characters`
    
 ### 🧠 Caching Logic
 
-- Cached by key format: `characters:${page}:${limit}` and `character:${id}`
+- If cache miss: fetch from the SWAPI API, store in Redis
 - Uses Redis with default TTL to improve performance
 - If cache miss: fetch from SWAPI, store in Redis
 
@@ -97,13 +95,12 @@ SCSS used for styling with modular structure
 Responsive layout via media queries and flex/grid
 
 Adaptive UI for all screen sizes (mobile to desktop)
+Layer    Tech / Library
+Backend    Express, TypeScript, Redis, Axios
+Frontend    React, Vite, TypeScript, RTK Query
+Styling    SCSS
+Deployment    Localhost (for now)
 
-⚙️ Tools & Libraries
-Layer	Tech / Library
-Backend	Express, TypeScript, Redis, Axios
-Frontend	React, Vite, TypeScript, RTK Query
-Styling	SCSS
-Deployment	Localhost (for now)
 
 🚧 Known Limitations
 No unit tests implemented
@@ -111,7 +108,6 @@ No unit tests implemented
 Some edge cases (e.g., invalid API responses) handled generally
 
 Deployed version pending (can be hosted on Render + Vercel)
+Developer: Rabita Amin 
+GitHub: Rabita1767 
 
-📩 Contact
-Developer: Rabita Amin
-GitHub: Rabita1767
