@@ -114,4 +114,7 @@ No automated unit tests added yet.
 ## 👩‍💻 Author
 
 **Rabita Amin**  
+I have deployed the project. For backend deployment, I used Render and for frontend, I used Vercel.
+I also used Upstash to deploy Redis.
+🔹 Note: These deployments are not required to run the project on a local server. ✅
 Fullstack Developer | MERN | Redis | Clean Code Enthusiast  

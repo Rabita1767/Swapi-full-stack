@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node dist/server.js",
     "build": "tsc", 
-    "dev": "nodemon"
+    "dev": "nodemon",
+    "clear-cache": "ts-node src/scripts/clearRedis.ts"
   },
   "keywords": [],
   "author": "",
