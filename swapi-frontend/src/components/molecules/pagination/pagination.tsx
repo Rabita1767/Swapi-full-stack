@@ -30,6 +30,7 @@ const Pagination: React.FC<IPaginationProps> = ({ currentPage, totalPages, onPag
       label={<ChevronLeft size={24} />}
       onClick={handlePrevious}
       disabled={currentPage === 1}
+      backgroundColor="gradientPink"
     />
 
       <span className={`${componentClassName}__info`}>
@@ -39,6 +40,7 @@ const Pagination: React.FC<IPaginationProps> = ({ currentPage, totalPages, onPag
       label={<ChevronRight size={24} />}
       onClick={handleNext}
       disabled={currentPage === totalPages}
+      backgroundColor="gradientPink"
     />
     </div>
   );

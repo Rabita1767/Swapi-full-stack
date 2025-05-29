@@ -2,23 +2,18 @@ import "./singleCharacterCard.scss";
 import { ChevronLeft, Code2 } from "lucide-react";
 import Text from "../../atoms/text/text";
 import type { CharacterResult } from "../../../types/type";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 interface IProps{
     data:CharacterResult | null;
 }
 const SingleCharacterCard:React.FC<IProps> = ({data}) => { 
     const navigate = useNavigate();
+    const {id}=useParams();
     const componentClassName="m-single-character-card";
-    const handleBack=()=>{
-        navigate(-1);
-    }
     return(
         <>
         {data && (
             <div className={componentClassName}>
-            <div>
-                {/* <img src={PosterImage} alt="Poster" /> */}
-            </div>
             <div className={`${componentClassName}__content`}>
                 <div className={`${componentClassName}__header`}>
                     <div className={`${componentClassName}__header__icon`}>
@@ -48,7 +43,7 @@ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deseru
                             Object.entries(data.properties).map(([key, value]) => (
                                 <li key={key}>
                                     <ul>
-                                      <Text color="gray" lineHeight='28lh' children={`${key.toUpperCase()}: ${value}`} />
+                                      <Text color="gray" lineHeight='28lh' children={<>{key.toUpperCase()}: <span>{value}</span></>} onClick={key==="url" ? ()=>navigate(`/character/${id}`) : ()=>{}} isPointer={key==="url"}/>
                                     </ul>
                                 </li>
                             ))}
@@ -57,7 +52,7 @@ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deseru
             </div>
         </div>
         )}
-        <div className={`${componentClassName}__button`} onClick={handleBack}>
+        <div className={`${componentClassName}__button`} onClick={()=>navigate("/")}>
             <ChevronLeft size={24} />
         </div>
         </>

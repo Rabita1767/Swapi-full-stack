@@ -8,7 +8,7 @@ export const apiSlice = createApi({
             query: ({ page = 1, limit = 10 ,search=""}) => `?page=${page}&limit=${limit}&search=${search}`, 
         }),
         getCharacterById: builder.query({
-            query: (id: number) => `${id}`, 
+            query: (id: number | string | undefined) => `${id}`, 
         }),
     }),
 });

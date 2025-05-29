@@ -6,11 +6,10 @@ import type { CharacterResult } from "../../types/type";
 import { useGetCharacterByIdQuery } from "../../store/apiSlice";
 import Outlet from "../../components/layouts/outlets/outlet";
 import Loader from "../../components/loader/loader";
-import { ChevronLeft, ChevronUp } from "lucide-react";
+import { toast } from "react-toastify";
 
 const SingleProductView = () => {
     const {id}=useParams();
-  console.log("SingleProductView id", id);
     const componentClassName = "p-single-product-view";
     const [singleCharacterData, setSingleCharacterData] = useState<CharacterResult | null>(null);
     const {data: singleCharacterDataResponse, isLoading, isSuccess, isError } = useGetCharacterByIdQuery(id);
@@ -19,8 +18,17 @@ const SingleProductView = () => {
             setSingleCharacterData(singleCharacterDataResponse?.data?.result);
         }
     },[id, isSuccess, singleCharacterDataResponse])
+
+    useEffect(()=>{
+      if(isError)
+      {
+        toast.error("Something went wrong!");
+      }
+
+    },[isError])
+
   return (
-    <Outlet>
+    <Outlet isButtonHidden isSearchbarHidden>
         {isLoading ? <div className="loader-container"><Loader/></div> :(
             <>
                 <div className={componentClassName}>

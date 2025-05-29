@@ -1,4 +1,5 @@
 import {useNavigate} from "react-router-dom";
+import { motion } from "framer-motion";
 import type { ICharacter } from "../../../types/type";
 import Button from "../../atoms/button/button";
 import Text from "../../atoms/text/text";
@@ -11,24 +12,27 @@ interface ICharacterCard {
 const CharacterCard:React.FC<ICharacterCard>=({data})=>{
     const navigate= useNavigate();
     const componentClassName= "m-character-card";
+    const delay = 0.5;
+    const duration = 1.8;
     
     const clickHandler=(id:string)=>{
-        console.log("id",id);
-        navigate(`/character/${id}`);
-        
+        navigate(`/character/${id}`);    
     }
       
     return(
-        <div className={componentClassName}>
+        <motion.div className={componentClassName}
+        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: duration, delay: delay }}
+                        viewport={{ once: true }}
+        >
        {data && data.length>0 && data.map((character:ICharacter) => (
-         <div className={`${componentClassName}__container`} key={character?.details?._id}>
+         <div
+         className={`${componentClassName}__container`}
+         key={character?.details?._id}      
+       >
          <div className={`${componentClassName}__contentHeader`}>
              <div className={`${componentClassName}__contentHeader__main`}>
-                 {/* <img
-                     className={`${componentClassName}__contentHeader__image`}
-                     src="https://starwars-visualguide.com/assets/img/characters/1.jpg"
-                     alt="character"
-                 /> */}
                  <div className={`${componentClassName}__contentHeader__text`}>
                     <Text color="white" fontSize="24" fontWeight="600" children={character?.name ?? 'N/A'}/>
                      <Text color="purple" fontSize="18" children={character?.details?.properties?.gender.toUpperCase() ?? "N/A"}/>
@@ -44,11 +48,11 @@ const CharacterCard:React.FC<ICharacterCard>=({data})=>{
                 <div className={`${componentClassName}__contentFooter__main`}><Text color="gray" children={character?.details?.properties?.height ?? "N/A"}/></div>
          </div>
          <div className={`${componentClassName}__buttonContainer`}>
-            <Button onClick={() => clickHandler(character?.uid)} label="View Details"/>
+            <Button onClick={() => clickHandler(character?.uid)} label="View Details" backgroundColor="gradientPink"/>
          </div>
-        </div>
+         </div>
        ))}
-        </div>
+        </motion.div>
     )
 
 }

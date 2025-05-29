@@ -1,1 +1,49 @@
 @import "../../styles/index.scss";
+
+.p-home
+{
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        min-height: calc(100vh - 4rem);
+        justify-content: space-between;
+        padding: 1rem;
+      }
+      &__no-data-wrapper {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      &__loader-container {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      &__pagination-wrapper {
+        margin-top: auto;
+        padding-top: 1rem;
+      }
+}
+// .home-page-wrapper {
+//     display: flex;
+//     flex-direction: column;
+//     min-height: calc(100vh - 4rem);
+//     justify-content: space-between;
+//     padding: 1rem;
+//   }
+  
+//   .loader-container,
+//   .no-data-wrapper {
+//     flex-grow: 1;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//   }
+  
+//   .pagination-wrapper {
+//     margin-top: auto;
+//     padding-top: 1rem;
+//   }
+  

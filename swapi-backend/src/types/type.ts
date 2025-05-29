@@ -34,3 +34,18 @@ export interface ICharacter {
     url: string;
     details: ICharacterDetails;
 }
+
+export interface ICharactersData {
+    totalCharacters: number;
+    totalPages: number;
+    currentPage: number;
+    characters: ICharacter[];
+  }
+  
+  export interface ICharactersResponse {
+    success: boolean;
+    message: string;
+    cached: boolean;
+    data: ICharactersData;
+    error: any;
+  }

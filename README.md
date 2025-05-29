@@ -74,12 +74,16 @@ Then open 👉 [http://localhost:5173](http://localhost:5173) in your browser.
 - 🔍 Search characters by name
 - 📄 View character details by ID
 - ⚡️ Redis caching for faster backend responses
-- ❌ Handles 404 and error states
-- 🌌 Styled using SCSS (with modular components)
-- 📱 Fully responsive design for devices ranging from **340px** to **1280px**
-- 🖼️ Optimized layout for mobile, tablet, and desktop screens
-- 🎨 Adaptive SCSS styling for seamless user experience across all resolutions
-- 🔄 Integrated **RTK Query** for efficient state management and API data fetching
+- ❌ Gracefully handles 404, loading, and error states
+- 🎨 Styled using **SCSS** with modular structure
+- 🧩 Structured via **Atomic Design** (atoms, molecules, organisms)
+- 🔄 Integrated **RTK Query** for efficient API data fetching and caching
+- 🌀 Smooth UI animations using **Framer Motion**
+- 🔔 Toast notifications powered by **React Toastify**
+- 📱 Fully responsive across all screen sizes (340px–1280px)
+- 🖼️ Optimized layout for mobile, tablet, and desktop devices
+- 🔧 Environment-based config via `.env` files
+
 
 ---
 

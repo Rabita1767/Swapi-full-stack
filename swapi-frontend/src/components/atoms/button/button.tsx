@@ -8,6 +8,7 @@ interface IButtonProps {
   type?: "button" | "submit" | "reset"; 
   variant?: "primary" | "secondary" | "danger"; 
   disabled?: boolean; 
+  backgroundColor?:"gradientPink"
 }
 
 const Button: React.FC<IButtonProps> = ({
@@ -16,12 +17,13 @@ const Button: React.FC<IButtonProps> = ({
   type = "button",
   variant = "primary",
   disabled = false,
+  backgroundColor
 }) => {
   const componentClassName = `a-button`;
 
   return (
     <button
-      className={mapModifiers(componentClassName,variant,type)}
+      className={mapModifiers(componentClassName,variant,type,backgroundColor,disabled && "disabled")}
       onClick={onClick}
       type={type}
       disabled={disabled}

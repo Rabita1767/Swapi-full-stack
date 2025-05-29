@@ -17,4 +17,10 @@
         flex-direction: column;
         row-gap: 1rem;
     }
+    &--isSearchbarHidden
+    {
+        input {
+            display: none;
+        }
+    }
   }

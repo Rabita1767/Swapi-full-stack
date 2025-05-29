@@ -7,7 +7,6 @@ export const getCache = async (key: string): Promise<any> => {
   }
 
   try {
-      console.log("Getting cache for key:", key);
       const data = await redisClient.get(key);
       return data ? JSON.parse(data) : null;
   } catch (err) {
@@ -23,7 +22,6 @@ export const setCache = async (key: string, value: any, ttlSeconds: number = 600
   }
 
   try {
-      // console.log("Setting cache for key:", key, "with value:", value);
       await redisClient.set(key, JSON.stringify(value), { EX: ttlSeconds });
   } catch (err) {
       console.error("⚠️ Redis SET error:", err);

@@ -9,7 +9,6 @@ dotenv.config();
 
 const app = express();
 app.use((req, res, next) => {
-  console.log(`Incoming request: ${req.method} ${req.url}`);
   next();
 });
 app.use(cors());
@@ -22,8 +21,6 @@ if (!redisConnected) {
 }
 app.use("/api/characters", characterRoutes);
 app.use(errorHandler)
-
-// app.use('/api/characters', characterRoutes);
 
 const PORT = process.env.PORT ?? 8000;
 
