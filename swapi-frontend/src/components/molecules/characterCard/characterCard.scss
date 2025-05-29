@@ -1,7 +1,7 @@
 @import "../../../styles/index.scss";
 .m-character-card{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     column-gap: 2rem;
     padding: 1.5rem;
     width: 100%;
@@ -53,6 +53,7 @@
         justify-content: flex-start;
         gap: 1rem;
         margin-top: 0.75rem;
+        flex-wrap: wrap;
         &__main{
             border: 1px solid $color-light-gray;
             border-radius: 0.5rem;
