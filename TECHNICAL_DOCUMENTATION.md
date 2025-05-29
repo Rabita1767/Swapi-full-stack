@@ -98,7 +98,7 @@ Layer    Tech / Library
 Backend    Express, TypeScript, Redis, Axios
 Frontend    React, Vite, TypeScript, RTK Query
 Styling    SCSS
-Deployment    Localhost (for now)
+Deployment    Yes. Used Render to deploy backend and Vercel to deploy frontend.
 
 
 🚧 Known Limitations
@@ -106,7 +106,6 @@ No unit tests implemented
 
 Some edge cases (e.g., invalid API responses) handled generally
 
-Deployed version pending (can be hosted on Render + Vercel)
 Developer: Rabita Amin 
 GitHub: Rabita1767 
 
