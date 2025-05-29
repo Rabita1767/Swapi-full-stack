@@ -52,6 +52,7 @@
     }
     ul{
         color:$color-white;
+        word-break: break-all;
     }
     &__button{
         padding: 0.75rem; /* Equivalent to p-3 */
